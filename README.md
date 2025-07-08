@@ -1,1 +1,1 @@
-# supir-website.github.io
+# supir-website

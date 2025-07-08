@@ -1,1 +1,392 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPIR - XPixel Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">SUPIR</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">SUPIR</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Revolutionizing image restoration with cutting-edge large-scale AI
+                </p>
+                <p class="hero-description">
+                    Text-driven, intelligent restoration, blending AI technology with
+                    creativity to give every image a brand new life.
+                </p>
+            </div>
+            <div class="hero-demo">
+                <!-- Image Comparison Demo -->
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <h3>Before & After Comparison</h3>
+                        <p>Drag the slider to see the dramatic improvement in image quality</p>
+                    </div>
+                    <div class="image-comparison-container">
+                        <div class="image-comparison">
+                            <div class="comparison-image before-image">
+                                 <img src="图片13.png" alt="Low quality input image" />
+                                 <span class="image-label">LOW QUALITY INPUT</span>
+                             </div>
+                             <div class="comparison-image after-image">
+                                 <img src="图片14.png" alt="SUPIR enhanced result image" />
+                                 <span class="image-label">SUPIR RESULT</span>
+                             </div>
+                            <div class="comparison-slider">
+                                <div class="slider-line"></div>
+                                <div class="slider-handle">
+                                    <div class="slider-button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcement Banner -->
+    <section class="announcement">
+        <div class="announcement-content">
+            <span class="announcement-icon">🚀</span>
+            We're thrilled to announce the official launch of SupPixel AI! Experience the next level of image processing and upscaling with our cutting-edge AI technology based on SUPIR. Explore now at suppixel.ai.
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="content-container">
+            <!-- Technical Description -->
+            <div class="tech-section">
+                <h2 class="tech-title">
+                    Old Photo Restoration
+                </h2>
+                <div class="tech-demo">
+                    <div class="image-comparison-container">
+                        <div class="image-comparison" data-comparison="tech">
+                            <div class="comparison-image before-image">
+                                <img src="图片3.png" alt="Low quality technical image" />
+                                <span class="image-label">LOW QUALITY INPUT</span>
+                            </div>
+                            <div class="comparison-image after-image">
+                                <img src="图片4.png" alt="High quality technical image" />
+                                <span class="image-label">SUPIR RESULT</span>
+                            </div>
+                            <div class="comparison-slider">
+                                <div class="slider-line"></div>
+                                <div class="slider-handle">
+                                    <div class="slider-button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Sections -->
+            <div class="features-grid">
+                <!-- Landscape Restoration -->
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3 class="feature-title">Harnessing Diffusion-Yielded Score Priors for Image Restoration
+                        </h3>
+                        <p class="feature-description">
+                            
+                        </p>
+                    </div>
+                    <div class="feature-demo">
+                        <div class="demo-comparison">
+                            <div class="image-comparison" data-comparison="feature1">
+                                <div class="comparison-image before-image">
+                                    <img src="图片2.png" alt="Blurry landscape image" />
+                                    <span class="image-label">LOW QUALITY INPUT</span>
+                                </div>
+                                <div class="comparison-image after-image">
+                                    <img src="图片1.png" alt="Sharp landscape image" />
+                                    <span class="image-label">SUPIR RESULT</span>
+                                </div>
+                                <div class="comparison-slider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Face Enhancement -->
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3 class="feature-title">Ultra-High Resolution</h3>
+                        <p class="feature-description">
+                            
+                        </p>
+                    </div>
+                    <div class="feature-demo">
+                        <div class="demo-comparison">
+                            <div class="image-comparison" data-comparison="feature2">
+                                <div class="comparison-image before-image">
+                                    <img src="图片5.png" alt="Pixelated face image" />
+                                    <span class="image-label">LOW QUALITY INPUT</span>
+                                </div>
+                                <div class="comparison-image after-image">
+                                    <img src="图片6.png" alt="Sharp face image" />
+                                    <span class="image-label">SUPIR RESULT</span>
+                                </div>
+                                <div class="comparison-slider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animal Restoration -->
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3 class="feature-title">Text Fidelity</h3>
+                        <p class="feature-description">
+                            
+                        </p>
+                    </div>
+                    <div class="feature-demo">
+                        <div class="demo-comparison">
+                            <div class="image-comparison" data-comparison="feature3">
+                                <div class="comparison-image before-image">
+                                    <img src="图片7.png" alt="Noisy animal image" />
+                                    <span class="image-label">LOW QUALITY INPUT</span>
+                                </div>
+                                <div class="comparison-image after-image">
+                                    <img src="图片8.png" alt="Clear animal image" />
+                                    <span class="image-label">SUPIR RESULT</span>
+                                </div>
+                                <div class="comparison-slider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Enhancement -->
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3 class="feature-title">Interaction with Prompts
+                        </h3>
+                        <p class="feature-description">
+                            
+                        </p>
+                    </div>
+                    <div class="feature-demo">
+                        <div class="demo-comparison">
+                            <div class="image-comparison" data-comparison="feature4">
+                                <div class="comparison-image before-image">
+                                    <img src="图片9.png" alt="Low resolution game image" />
+                                    <span class="image-label">LOW QUALITY INPUT</span>
+                                </div>
+                                <div class="comparison-image after-image">
+                                    <img src="图片10.png" alt="High resolution game image" />
+                                    <span class="image-label">SUPIR RESULT</span>
+                                </div>
+                                <div class="comparison-slider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinematic Restoration -->
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3 class="feature-title">Texture Sharpness Adjustment</h3>
+                        <p class="feature-description">
+                            
+                        </p>
+                    </div>
+                    <div class="feature-demo">
+                        <div class="demo-comparison">
+                            <div class="image-comparison" data-comparison="feature5">
+                                <div class="comparison-image before-image">
+                                    <img src="图片11.png" alt="Distorted film image" />
+                                    <span class="image-label">LOW QUALITY INPUT</span>
+                                </div>
+                                <div class="comparison-image after-image">
+                                    <img src="图片12.png" alt="Restored film image" />
+                                    <span class="image-label">SUPIR RESULT</span>
+                                </div>
+                                <div class="comparison-slider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">SUPIR</span>
+                        <p class="footer-tagline">XPixel Group</p>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionizing image restoration with cutting-edge large-scale AI technology.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Image Restoration</a></li>
+                        <li><a href="#">Super Resolution</a></li>
+                        <li><a href="#">AI Enhancement</a></li>
+                        <li><a href="#">Batch Processing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2024 XPixel Group. All rights reserved.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
