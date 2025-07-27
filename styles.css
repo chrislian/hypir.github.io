@@ -496,14 +496,14 @@ body {
 }
 
 .announcement a {
-    color: #8b5cf6;
+    color: #00d4ff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .announcement a:hover {
-    color: #a855f7;
+    color: #00b8e6;
     text-decoration: underline;
 }
 
@@ -519,7 +519,6 @@ body {
 }
 
 /* Technical Section */
-/*
 .tech-section {
     margin-bottom: 4rem;
 }
@@ -560,7 +559,44 @@ body {
     display: flex;
     justify-content: center;
 }
-*/
+
+/* 只为Old Photo Restoration模块添加特殊样式 */
+.tech-section-styled {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3rem !important;
+    align-items: center !important;
+    padding: 3rem !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(20px) !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 4rem !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.tech-section-styled:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(139, 92, 246, 0.3) !important;
+    transform: translateY(-5px) !important;
+}
+
+.tech-section-styled .tech-content {
+    display: block !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.tech-section-styled .tech-text {
+    max-width: none !important;
+}
+
+.tech-section-styled .tech-demo {
+    max-width: none !important;
+}
 
 /* Features Grid */
 .features-grid {
@@ -684,7 +720,6 @@ body {
         padding: 0 1rem;
     }
 
-    /*
     .tech-content {
         flex-direction: column;
         text-align: center;
@@ -698,7 +733,12 @@ body {
     .tech-title {
         font-size: 2rem;
     }
-    */
+
+    /* 响应式设计 */
+    .tech-section-styled {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
 
     .feature-section {
         padding: 2rem;
@@ -767,11 +807,13 @@ body {
         font-size: 1rem;
     }
 
-    /*
     .tech-title {
         font-size: 1.5rem;
     }
-    */
+
+    .tech-section-styled {
+        padding: 2rem !important;
+    }
 
     .feature-title {
         font-size: 1.3rem;
