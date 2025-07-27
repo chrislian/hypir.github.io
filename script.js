@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // 注释掉或删除这整段代码
+    /*
     // Image hover effects
     const demoImages = document.querySelectorAll('.demo-image, .comparison-image');
     
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = 'none';
         });
     });
+    */
     
     // Typing animation for hero title
     const heroTitle = document.querySelector('.title-main');
