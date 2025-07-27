@@ -46,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                // 排除包含视频的 tech-section
+                const hasVideo = entry.target.querySelector('.video-demo, .video-demo-container');
+                if (!hasVideo) {
+                    entry.target.classList.add('animate-in');
+                }
             }
         });
     }, observerOptions);
@@ -65,7 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const parallax = scrolled * 0.3;
         
         if (hero) {
-            hero.style.transform = `translateY(${parallax}px)`;
+            // 检查hero中是否包含视频
+            const hasVideo = hero.querySelector('.video-demo, .video-demo-container');
+            if (!hasVideo) {
+                hero.style.transform = `translateY(${parallax}px)`;
+            }
         }
     });
     
@@ -109,6 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const featureSections = document.querySelectorAll('.feature-section, .tech-section');
     
     featureSections.forEach(section => {
+        // 排除包含视频的 tech-section
+        const hasVideo = section.querySelector('.video-demo, .video-demo-container');
+        if (hasVideo) {
+            return; // 跳过包含视频的section
+        }
+        
         section.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px)';
             this.style.boxShadow = '0 30px 60px rgba(139, 92, 246, 0.2)';
@@ -125,11 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoContainers = document.querySelectorAll('.video-demo-container');
     
     demoContainers.forEach(container => {
-        // 排除hero-demo和video-demo中的容器
+        // 排除hero-demo、video-demo和video-section中的容器
         const isHeroDemo = container.closest('.hero-demo');
         const isVideoDemo = container.closest('.video-demo');
+        const isVideoSection = container.closest('.video-section'); // 新增这个检查
         
-        if (isHeroDemo || isVideoDemo) {
+        if (isHeroDemo || isVideoDemo || isVideoSection) {
             return; // 跳过这些容器的浮动动画
         }
         
