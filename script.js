@@ -334,12 +334,15 @@ function initImageComparison(comparison) {
     let startX = 0;
     let currentX = 50; // Start at 50% (middle)
     
-    // Update the clip path based on position
+    // 优化updateClipPath函数
     function updateClipPath(percentage) {
         percentage = Math.max(0, Math.min(100, percentage));
-        afterImage.style.clipPath = `polygon(${percentage}% 0%, 100% 0%, 100% 100%, ${percentage}% 100%)`;
-        slider.style.left = `${percentage}%`;
-        currentX = percentage;
+        
+        requestAnimationFrame(() => {
+            afterImage.style.clipPath = `polygon(${percentage}% 0%, 100% 0%, 100% 100%, ${percentage}% 100%)`;
+            slider.style.left = `${percentage}%`;
+            currentX = percentage;
+        });
     }
     
     // Get position from mouse/touch event
@@ -356,7 +359,7 @@ function initImageComparison(comparison) {
         isDragging = true;
         startX = getPositionFromEvent(e);
         comparison.style.cursor = 'grabbing';
-        sliderButton.style.transform = 'translate(-50%, -50%) scale(0.95)';
+        sliderButton.classList.add('dragging');
         
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
@@ -373,7 +376,7 @@ function initImageComparison(comparison) {
     function handleMouseUp() {
         isDragging = false;
         comparison.style.cursor = 'grab';
-        sliderButton.style.transform = 'translate(-50%, -50%) scale(1)';
+        sliderButton.classList.remove('dragging');
         
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
@@ -384,7 +387,7 @@ function initImageComparison(comparison) {
         e.preventDefault();
         isDragging = true;
         startX = getPositionFromEvent(e);
-        sliderButton.style.transform = 'translate(-50%, -50%) scale(0.95)';
+        sliderButton.classList.add('dragging');
         
         document.addEventListener('touchmove', handleTouchMove, { passive: false });
         document.addEventListener('touchend', handleTouchEnd);
@@ -400,7 +403,7 @@ function initImageComparison(comparison) {
     
     function handleTouchEnd() {
         isDragging = false;
-        sliderButton.style.transform = 'translate(-50%, -50%) scale(1)';
+        sliderButton.classList.remove('dragging');
         
         document.removeEventListener('touchmove', handleTouchMove);
         document.removeEventListener('touchend', handleTouchEnd);
@@ -483,17 +486,6 @@ function initImageComparison(comparison) {
     
     // Initialize position
     updateClipPath(50);
-    
-    // Add subtle animation on load
-    setTimeout(() => {
-        updateClipPath(30);
-        setTimeout(() => {
-            updateClipPath(70);
-            setTimeout(() => {
-                updateClipPath(50);
-            }, 800);
-        }, 800);
-    }, 1000);
 }
 
 // Add CSS animations
