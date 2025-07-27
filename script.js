@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Feature section hover effects
-    const featureSections = document.querySelectorAll('.feature-section');
+    const featureSections = document.querySelectorAll('.feature-section, .tech-section');
     
     featureSections.forEach(section => {
         section.addEventListener('mouseenter', function() {
@@ -120,10 +120,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Floating animation for demo containers
+    // Floating animation for demo containers (修改这部分)
     const demoContainers = document.querySelectorAll('.demo-container');
     
     demoContainers.forEach(container => {
+        // 排除hero-demo和video-demo中的容器
+        const isHeroDemo = container.closest('.hero-demo');
+        const isVideoDemo = container.closest('.video-demo');
+        
+        if (isHeroDemo || isVideoDemo) {
+            return; // 跳过这些容器的浮动动画
+        }
+        
         let floatDirection = 1;
         
         setInterval(() => {
