@@ -402,9 +402,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-.demo-image:hover {
+/* .demo-image:hover {
     transform: scale(1.05);
-}
+} */
 
 .demo-image.before {
     background: linear-gradient(135deg, #374151, #4b5563);
@@ -1020,4 +1020,11 @@ html {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/* 在文件末尾添加，覆盖悬停效果 */
+.demo-image:hover,
+.comparison-image:hover {
+    transform: none !important;
+    box-shadow: none !important;
 }
