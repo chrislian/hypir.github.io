@@ -159,7 +159,20 @@ body {
     border-radius: 20px;
     padding: 2rem;
     backdrop-filter: blur(10px);
-    animation: float 6s ease-in-out infinite;
+    /* 移除这行未定义的动画 */
+    /* animation: float 6s ease-in-out infinite; */
+}
+
+/* 为视频容器禁用浮动动画 */
+.video-demo-container,
+.video-demo-container .demo-container,
+.hero-demo .demo-container {
+    animation: none !important;
+    transform: none !important;
+}
+
+.video-section .demo-container {
+    animation: none !important;
 }
 
 .hero-demo .demo-container {
@@ -1047,4 +1060,28 @@ html {
 .comparison-image:hover {
     transform: none !important;
     box-shadow: none !important;
+}
+
+/* 视频提示文字样式 */
+.video-notice {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.video-notice p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.video-notice a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.video-notice a:hover {
+    color: #a855f7;
+    text-decoration: underline;
 }
