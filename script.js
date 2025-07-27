@@ -135,10 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
     
-    // Glitch effect for SUPIR title
-    const supirTitle = document.querySelector('.title-main');
+    // Glitch effect for  title
+    const Title = document.querySelector('.title-main');
     
-    if (supirTitle) {
+    if (Title) {
         setInterval(() => {
             if (Math.random() < 0.1) { // 10% chance
                 supirTitle.style.textShadow = `
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingScreen.style.transition = 'opacity 1s ease-out';
         
         const loadingText = document.createElement('div');
-        loadingText.textContent = 'SUPIR';
+        loadingText.textContent = 'HYPIR';
         loadingText.style.fontSize = '4rem';
         loadingText.style.fontWeight = '900';
         loadingText.style.background = 'linear-gradient(135deg, #8b5cf6, #a855f7)';
