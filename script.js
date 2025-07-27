@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Floating animation for demo containers (修改这部分)
     const demoContainers = document.querySelectorAll('.demo-container');
+    const videoContainers = document.querySelectorAll('.video-demo-container');
     
     demoContainers.forEach(container => {
         // 排除hero-demo和video-demo中的容器
@@ -144,6 +145,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             container.style.transform = `translateY(${currentY + floatDirection}px)`;
         }, 100);
+    });
+    
+    // 确保video-demo-container不会有任何浮动动画
+    videoContainers.forEach(container => {
+        // 移除任何可能的transform
+        container.style.transform = 'none';
+        // 防止任何动画
+        container.style.animation = 'none';
     });
     
     // Glitch effect for  title
