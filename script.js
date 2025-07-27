@@ -141,14 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (Title) {
         setInterval(() => {
             if (Math.random() < 0.1) { // 10% chance
-                supirTitle.style.textShadow = `
+                Title.style.textShadow = `
                     2px 0 #ff0000,
                     -2px 0 #00ffff,
                     0 2px #ffff00
                 `;
                 
                 setTimeout(() => {
-                    supirTitle.style.textShadow = 'none';
+                    Title.style.textShadow = 'none';
                 }, 100);
             }
         }, 2000);
