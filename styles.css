@@ -15,15 +15,9 @@ body {
 
 /* Navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(20px);
-    z-index: 1000;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-container {
@@ -45,10 +39,10 @@ body {
     letter-spacing: -0.02em;
 }
 
-.nav-menu {
+nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem; /* 所有元素统一间距 */
+    gap: 1.5rem; /* 减小间距 */
 }
 
 .nav-link {
@@ -1177,7 +1171,7 @@ html {
     text-decoration: underline;
 }
 .lang-toggle-btn {
-    margin-left: 1rem; 
+    margin-left: 0.5rem; /* 小的分离间距 */
 }
 
 .lang-toggle-btn:hover {
