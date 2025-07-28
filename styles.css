@@ -47,7 +47,8 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 2rem; /* 所有元素统一间距 */
 }
 
 .nav-link {
@@ -1176,14 +1177,7 @@ html {
     text-decoration: underline;
 }
 .lang-toggle-btn {
-    background: linear-gradient(135deg, #8b5cf6, #a855f7);
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    
 }
 
 .lang-toggle-btn:hover {
