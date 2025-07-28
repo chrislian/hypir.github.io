@@ -112,7 +112,53 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(typeWriter, 1000);
     }
+
+
+    // 语言切换功能
+    const websiteLinks = {
+        chinese: {
+            url: 'https://your-chinese-website.com', // 您的中文网站链接
+            buttonText: 'EN'
+        },
+        english: {
+            url: window.location.origin + window.location.pathname,
+            buttonText: '中文'
+        }
+    };
     
+    function detectCurrentSite() {
+        const currentDomain = window.location.hostname;
+        if (currentDomain.includes('hypir.xpixel.group')) {
+            return 'english';
+        } else {
+            return 'chinese';
+        }
+    }
+    
+    let currentSite = detectCurrentSite();
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const langToggle = document.getElementById('lang-toggle');
+        const langText = document.querySelector('.lang-text');
+        
+        if (langToggle && langText) {
+            if (currentSite === 'chinese') {
+                langText.textContent = 'EN';
+            } else {
+                langText.textContent = '中文';
+            }
+            
+            langToggle.addEventListener('click', function() {
+                let targetUrl;
+                if (currentSite === 'chinese') {
+                    targetUrl = websiteLinks.english.url;
+                } else {
+                    targetUrl = websiteLinks.chinese.url;
+                }
+                window.location.href = targetUrl;
+            });
+        }
+    });
     // Feature section hover effects
     const featureSections = document.querySelectorAll('.feature-section, .tech-section');
     
